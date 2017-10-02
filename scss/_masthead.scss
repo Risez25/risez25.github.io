@@ -1,49 +1,43 @@
 // Styling for the masthead
 header.masthead {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
   text-align: center;
+
   color: white;
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  @include background-cover;
+  background: $theme-success;
+  img {
+    display: block;
+
+    margin: 0 auto 20px;
+  }
   .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
-      margin-bottom: 25px;
-      @include serif-font;
-    }
-    .intro-heading {
-      font-size: 50px;
+    .name {
+      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 2em;
       font-weight: 700;
-      line-height: 50px;
-      margin-bottom: 25px;
-      @include heading-font;
+
+      display: block;
+
+      text-transform: uppercase;
+    }
+    .skills {
+      font-size: 1.25em;
+      font-weight: 300;
     }
   }
 }
 @media(min-width:768px) {
   header.masthead {
+    padding-top: 200px;
+    padding-bottom: 100px;
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include serif-font;
+      .name {
+        font-size: 4.75em;
       }
-      .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
+      .skills {
+        font-size: 1.75em;
       }
     }
   }

@@ -9,7 +9,7 @@
       max-width: 400px;
       margin: 0 auto;
       cursor: pointer;
-      .portfolio-hover {
+      .caption {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -17,11 +17,11 @@
         -moz-transition: all ease 0.5s;
         transition: all ease 0.5s;
         opacity: 0;
-        background: fade-out($theme-primary, .1);
+        background: fade-out($theme-success, .1);
         &:hover {
           opacity: 1;
         }
-        .portfolio-hover-content {
+        .caption-content {
           font-size: 20px;
           position: absolute;
           top: 50%;
@@ -40,23 +40,6 @@
         }
       }
     }
-    .portfolio-caption {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 25px;
-      text-align: center;
-      background-color: white;
-      h4 {
-        margin: 0;
-        text-transform: none;
-      }
-      p {
-        font-size: 16px;
-        font-style: italic;
-        margin: 0;
-        @include serif-font;
-      }
-    }
   }
   * {
     z-index: 2;
@@ -72,41 +55,30 @@
 
 .portfolio-modal {
   .modal-dialog {
-    max-width: none;
-    height: 100%;
-    margin: 0;
-  }
-  .modal-content {
+    max-width: 100%;
     min-height: 100%;
-    padding: 100px 0;
+    margin: 0;
+    padding: 0;
     text-align: center;
     border: none;
     border-radius: 0;
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
-    h2 {
-      font-size: 3em;
-      margin-bottom: 15px;
-    }
-    p {
-      margin-bottom: 30px;
-    }
-    p.item-intro {
-      font-size: 16px;
-      font-style: italic;
-      margin: 20px 0 30px;
-      @include serif-font;
-    }
-    ul.list-inline {
-      margin-top: 0;
-      margin-bottom: 30px;
-    }
-    img {
-      margin-bottom: 30px;
-    }
-    button {
-      cursor: pointer;
+    .modal-content {
+      padding: 100px 0;
+      border: 0;
+      border-radius: 0;
+      h2 {
+        font-size: 3em;
+        margin: 0;
+      }
+      img {
+        margin-bottom: 30px;
+      }
+      .item-details {
+        margin: 30px 0;
+      }
     }
   }
   .close-modal {
@@ -130,7 +102,7 @@
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
-      background-color: $gray-darker;
+      background-color: $theme-primary;
       .rl {
         /* Safari and Chrome */
         z-index: 1052;
@@ -140,7 +112,7 @@
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
-        background-color: $gray-darker;
+        background-color: $theme-primary;
       }
     }
   }
